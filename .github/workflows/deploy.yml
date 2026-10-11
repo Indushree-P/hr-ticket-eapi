@@ -17,8 +17,18 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
+          distribution: zulu
           java-version: '17'
+
+      - name: Setup Maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: 3.9.6
+
+      - name: Verify Versions
+        run: |
+          java -version
+          mvn -version
 
       - name: Build Project
         run: mvn clean package -s .maven/settings.xml
