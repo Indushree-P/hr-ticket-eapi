@@ -30,8 +30,8 @@ jobs:
           java -version
           mvn -version
 
-      - name: Build Project
-        run: mvn clean package -s .maven/settings.xml
+      - name: Run MUnit Tests
+        run: mvn clean test -s .maven/settings.xml
         env:
           CONNECTED_APP_CLIENT_ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
           CONNECTED_APP_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
