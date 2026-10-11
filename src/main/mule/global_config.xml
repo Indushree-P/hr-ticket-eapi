@@ -11,6 +11,6 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 	</http:request-config>
 	<configuration-properties doc:name="Configuration properties" doc:id="152237ce-406c-4e29-ac33-517fbffe6d68" file="config-properties-eapi.yaml" />
 	<configuration doc:name="Configuration" doc:id="0f10075d-be53-4b50-897e-0ef29bb3d78c" defaultErrorHandler-ref="global_error_handler" />
-	<api-gateway:autodiscovery apiId="${api.id}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="9831361a-6473-4666-ad47-21f8da6d4c0c" flowRef="hr-ticket-eapi-main" />
+	<api-gateway:autodiscovery apiId="21229143" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="9831361a-6473-4666-ad47-21f8da6d4c0c" flowRef="hr-ticket-eapi-main" />
 
 </mule>
