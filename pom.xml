@@ -46,8 +46,8 @@
 
 						<properties>
     						<anypoint.platform.gatekeeper>disabled</anypoint.platform.gatekeeper>
-    						<anypoint.platform.client_id>${env.PLATFORM_CLIENT_ID}</anypoint.platform.client_id>
-    						<anypoint.platform.client_secret>${env.PLATFORM_CLIENT_SECRET}</anypoint.platform.client_secret>
+    						<anypoint.platform.client_id>${env.ENV_CLIENT_ID}</anypoint.platform.client_id>
+    						<anypoint.platform.client_secret>${env.ENV_CLIENT_SECRET}</anypoint.platform.client_secret>
 						</properties>
 						
 					</cloudhub2Deployment>
