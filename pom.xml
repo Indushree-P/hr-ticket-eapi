@@ -45,18 +45,11 @@
 						<deploymentTimeout>900000</deploymentTimeout>
 
 						<properties>
-    						<anypoint.platform.client_id>
-        						${anypoint.client_id}
-    						</anypoint.platform.client_id>
-
-    						<anypoint.platform.client_secret>
-        						${anypoint.client_secret}
-    						</anypoint.platform.client_secret>
-
-    						<api.id>
-        						${anypoint.api_id}
-    						</api.id>
+    						<anypoint.platform.gatekeeper>disabled</anypoint.platform.gatekeeper>
+    						<anypoint.platform.client_id>${env.PLATFORM_CLIENT_ID}</anypoint.platform.client_id>
+    						<anypoint.platform.client_secret>${env.PLATFORM_CLIENT_SECRET}</anypoint.platform.client_secret>
 						</properties>
+						
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
