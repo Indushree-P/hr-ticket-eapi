@@ -37,17 +37,15 @@ jobs:
           CONNECTED_APP_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
 
       - name: Publish To Exchange
-        run: mvn deploy -DmuleDeploy=false -s .maven/settings.xml
+        run: mvn clean deploy -DmuleDeploy=false -DskipTests -s .maven/settings.xml
         env:
           CONNECTED_APP_CLIENT_ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
           CONNECTED_APP_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
 
       - name: Deploy To CloudHub 2.0
-        run: |
-          mvn deploy -DskipTests -s .maven/settings.xml \
-            -Danypoint.client_id=${{ secrets.PLATFORM_CLIENT_ID }} \
-            -Danypoint.client_secret=${{ secrets.PLATFORM_CLIENT_SECRET }} \
-            -Danypoint.api_id=${{ secrets.API_AUTODISCOVERY_ID }}
+        run: mvn mule:deploy -DskipTests -s .maven/settings.xml
         env:
           CONNECTED_APP_CLIENT_ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
           CONNECTED_APP_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
+          ENV_CLIENT_ID: ${{ secrets.PLATFORM_CLIENT_ID }}
+          ENV_CLIENT_SECRET: ${{ secrets.PLATFORM_CLIENT_SECRET }}
