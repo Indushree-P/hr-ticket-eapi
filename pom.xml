@@ -37,7 +37,7 @@
         				<environment>Sandbox</environment>
         				<target>Cloudhub-US-East-2</target>
         				<server>anypoint-connected-app</server>
-        				<applicationName>app-hr-ticket-sapi</applicationName>
+        				<applicationName>app-hr-ticket-eapi</applicationName>
         				<muleVersion>4.12.2</muleVersion>
         				<releaseChannel>Edge</releaseChannel>
         				<replicas>1</replicas>
